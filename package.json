@@ -1,0 +1,36 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "jest": "jest --runInBand",
+    "test": "npm run jest -- --coverage",
+    "test:watch": "npm run jest -- --watchAll",
+    "test:verbose": "npm run test -- --verbose",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jose-401-advanced-javascript/socket.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jose-401-advanced-javascript/socket.io/issues"
+  },
+  "homepage": "https://github.com/jose-401-advanced-javascript/socket.io#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "eslint": "^6.5.1"
+  }
+}
