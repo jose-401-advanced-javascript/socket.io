@@ -6,4 +6,8 @@ const readFile = () => {
   return fs.readFile(process.argv[2], { encoding: 'utf-8' });
 };
 
-readFile().then(text => socket.emit('file-read', { content: text, path: process.argv[2] }));
+readFile()
+  .then(text => socket.emit('file-read', { content: text, path: process.argv[2] }))
+  .catch((error) => {
+    socket.emit('file-error', error);
+  });

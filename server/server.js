@@ -9,7 +9,15 @@ io.on('connect', socket => {
 
   socket.on('file-write', data => {
     console.log('*** 2nd', data);
-    socket.broadcast.emit('')
+    socket.broadcast.emit('file-write', data);
+  });
+
+  socket.on('file-saved', data => {
+    console.log('*** 3nd', data);
+  });
+
+  socket.on('file-error', data => {
+    console.log('*** Err', data);
   });
 
 });
