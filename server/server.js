@@ -13,11 +13,11 @@ io.on('connect', socket => {
   });
 
   socket.on('file-saved', data => {
-    console.log('*** 3nd', data);
+    console.log('file saved successfully', data);
   });
 
   socket.on('file-error', data => {
-    console.log('*** Err', data);
+    console.log('Error', data);
   });
 
 });

@@ -1,10 +1,6 @@
 const io = require('socket.io-client');
 const socket = io.connect('http://localhost:7890');
-const fs = require('fs').promises;
-
-const writeFile = (path, content) => {
-  return fs.writeFile(path, content);
-};
+const writeFile = require('./modules/file-save');
 
 socket.on('file-write', data => {
   console.log(data);
